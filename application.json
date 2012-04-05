@@ -1,0 +1,71 @@
+[
+    {
+        "settings": [ "master" ],
+        "log": {
+          "client": {
+            "level": "info",
+            "yui": false
+          },
+          "server": { 
+            "level": "debug",
+            "yui": false
+          } 
+        },
+        "appPort": 8000,
+        "specs": {
+            "myMojit" : {
+                "type" : "HTMLFrameMojit",
+                "config": {
+                    "title": "Yahoo! Flickr Instant, Weather and Movies",
+                    "deploy": false,
+                    "child" : {
+                        "type": "myMojit"
+                    },
+                    "assets": {
+                        "top": {
+                            "css":[
+                                "/static/weather/assets/index.css"
+                            ]
+                        }
+                    }
+                }
+            },
+
+            "Notepad": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "title": "Notepad",
+                    "deploy": true,
+                    "child": {
+                        "type": "Notepad"
+                    },
+                    "assets": {
+                        "top": {
+                            "css":[
+                                "/static/Notepad/assets/index.css"
+                            ]
+                        }
+                    }
+                }
+            },
+
+            "weather": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "title": "weather",
+                    "deploy":true,
+                    "child": {
+                        "type": "weather"
+                    },
+                    "assets": {
+                        "top": {
+                            "css":[
+								 "/static/weather/assets/getWeather.css"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+]

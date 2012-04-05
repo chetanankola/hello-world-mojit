@@ -1,0 +1,27 @@
+[
+  {
+    "settings": ["master"],
+    "/" : {
+      "verbs": ["get"],
+      "path": "/",
+      "call": "weather.index"
+    },
+    "getweather" : {
+      "verbs": ["get"],
+      "path": "/search",
+      "call": "weather.getWeather" 
+    },
+    "showmeweather" : {
+      "verbs": ["get"],
+      "path": "/weather",
+      "call": "weather.showmeweather" 
+    },
+    
+    "Notepad" : {
+      "verbs": ["get"],
+      "path": "/notes",
+      "call": "Notepad.index"  
+    }    
+  }
+]
+
